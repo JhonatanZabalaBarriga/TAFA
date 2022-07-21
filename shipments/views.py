@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from .models import Container, Temperature_Reading
+
+class ContainerListView(ListView):
+    model = Container
+    template_name = 'container_list.html'
