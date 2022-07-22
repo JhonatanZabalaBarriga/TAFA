@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import ContainerListView
+from .views import ShipmentListView
 
 urlpatterns = [
-    path('', ContainerListView.as_view(), name='home'),
+    path('', ShipmentListView.as_view(), name='home'),
 ]

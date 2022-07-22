@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Container, Temperature_Reading
+from .models import Shipment, TemperatureReading
 
-admin.site.register(Container)
-admin.site.register(Temperature_Reading)
+admin.site.register(Shipment)
+admin.site.register(TemperatureReading)

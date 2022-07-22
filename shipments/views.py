@@ -1,7 +1,7 @@
 from django.views.generic import ListView
 
-from .models import Container, Temperature_Reading
+from .models import Shipment, TemperatureReading
 
-class ContainerListView(ListView):
-    model = Container
-    template_name = 'container_list.html'
+class ShipmentListView(ListView):
+    model = Shipment
+    template_name = 'shipment_list.html'

@@ -1,0 +1,12 @@
+<h1>All containers</h1>
+{% for shipment in object_list %}
+    <ul>
+        <li>Asset_ID: {{ shipment.asset_id }}</li>
+        <li>Produce: {{ shipment.produce }}</li>
+        <li>Weight: {{ shipment.weight }}</li>
+        <li>Pick-up time: {{ shipment.pick_up_time }}</li>
+        <li>Delivery time: {{ shipment.delivery_time }}</li>
+        <li>Ideal Temperature: {{ shipment.ideal_temperature }}</li>
+        <li>Farmer: {{ shipment.farmer }}</li>
+    </ul>
+{% endfor %}
