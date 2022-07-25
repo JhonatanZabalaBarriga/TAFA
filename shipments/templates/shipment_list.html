@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Shipments{% endblock title %}
+
+{% block content %}
+    {% for shipment in object_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold">{{ shipment.asset_id }}</span> &middot;
+                <span class="text-muted">by {{ shipment.farmer }}</span>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Produce: {{ shipment.produce }}</li>
+                    <li>Weight: {{ shipment.weight }}</li>
+                    <li>Pick-up time: {{ shipment.pick_up_time }}</li>
+                    <li>Delivery time: {{ shipment.delivery_time }}</li>
+                    <li>Ideal Temperature: {{ shipment.ideal_temperature }}</li>
+                </ul>
+            </div>
+            <div class="card-footer text-center text-muted">
+                <a href="{% url 'shipment_edit' shipment.pk %}">Edit</a> |
+                <a href="{% url 'shipment_delete' shipment.pk %}">Delete</a>
+            </div>
+        </div>
+        <br />
+    {% endfor %}
+{% endblock content %}

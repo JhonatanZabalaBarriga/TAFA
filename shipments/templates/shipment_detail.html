@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="article-entry">
+    <h2>{{ object.asset_id }}</h2>
+        <p>by {{ object.farmer }}</p>
+        <p>{{ object.produce }}</p>
+        <p>{{ object.weight }}</p>
+        <p>{{ object.pick_up_time }}</p>
+        <p>{{ object.delivery_time }}</p>
+        <p>{{ object.ideal_temperature }}</p>
+    </div>
+    <p><a href="{% url 'shipment_edit' shipment.pk %}">Edit</a> |
+        <a href="{% url 'shipment_delete' shipment.pk %}">Delete</a></p>
+    <p>Back to <a href="{% url 'shipment_list' %}">All Articles</a>.</p>
+{% endblock content %}
+    

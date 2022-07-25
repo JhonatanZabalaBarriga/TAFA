@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 django = "*"
 black = "*"
+django-crispy-forms = "*"
+requests = "*"
 
 [dev-packages]
 
