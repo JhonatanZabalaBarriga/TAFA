@@ -1,5 +1,5 @@
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from .models import Shipment, TemperatureReading
@@ -11,6 +11,11 @@ class ShipmentListView(ListView):
 class ShipmentDetailView(DetailView): 
     model = Shipment
     template_name = 'shipment_detail.html'
+
+class ShipmentCreateView(CreateView):
+    model = Shipment
+    template_name = 'shipment_new.html'
+    fields = '__all__'
 
 class ShipmentUpdateView(UpdateView): 
     model = Shipment

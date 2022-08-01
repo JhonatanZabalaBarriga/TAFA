@@ -22,6 +22,9 @@ class Shipment(models.Model):
     def __str__(self) -> str:
         return f"<ShipmentInstance {self.asset_id}>"
 
+    def get_absolute_url(self):
+        return reverse('shipment_detail', args=[str(self.pk)])
+
 class TemperatureReading(models.Model):
     temperature = models.IntegerField()
     timestamp = models.DateTimeField(auto_now_add=True)
