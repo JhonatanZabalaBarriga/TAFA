@@ -15,7 +15,7 @@ class ShipmentDetailView(DetailView):
 class ShipmentCreateView(CreateView):
     model = Shipment
     template_name = 'shipment_new.html'
-    fields = '__all__'
+    fields = ('produce', 'weight', 'pick_up_time', 'delivery_time', 'ideal_temperature', 'farmer',)
 
 class ShipmentUpdateView(UpdateView): 
     model = Shipment

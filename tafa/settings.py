@@ -125,3 +125,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# DO NOT COMMIT
+API_URL = "https://api.fetch.ai"
+ORG_ID = os.environ.get("ORG_ID")
+TWIN_ID = os.environ.get("TWIN_ID")
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")

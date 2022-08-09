@@ -1,0 +1,1 @@
+# Mock create/update/delete_asset
