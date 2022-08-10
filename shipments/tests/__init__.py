@@ -1,1 +1,0 @@
-from shipments.models import
