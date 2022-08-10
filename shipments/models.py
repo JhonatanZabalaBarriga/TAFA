@@ -25,5 +25,5 @@ class TemperatureReading(models.Model):
     shipment = models.ForeignKey(to=Shipment, on_delete=models.deletion.CASCADE)
 
     def __str__(self) -> str:
-        return f"<TemperatureReading {self.shipment}>"
+        return f"{self.temperature}"
 
