@@ -23,9 +23,11 @@ def shipment_pre_save(sender, instance, *args, **kwargs):
             "delivery_time": instance.delivery_time,
             "ideal_temp": instance.ideal_temperature,
             "farmer": instance.farmer,
+            "public": True,
         }
 
         update = update_asset(instance.asset_id, attributes)
+        print(update)
         print(f"{instance.asset_id} was updated")
 
 @receiver(pre_delete, sender=Shipment)

@@ -6,7 +6,9 @@
     {% for shipment in object_list %}
         <div class="card">
             <div class="card-header">
-                <span class="font-weight-bold">{{ shipment.asset_id }}</span> &middot;
+                <a href="{% url 'shipment_detail' shipment.pk %}">
+                    <span class="font-weight-bold">{{ shipment.asset_id }}</span>
+                </a> &middot;
                 <span class="text-muted">by {{ shipment.farmer }}</span>
             </div>
             <div class="card-body">
